@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이관 기능 솔루션 | 메가메디칼</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
+        body { font-family: 'Pretendard', sans-serif; background-color: #f1f5f9; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; background: #000; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .active-tab { background-color: #f97316; color: white; box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.2); }
+        .pdf-link { display: flex; align-items: center; padding: 14px; background: white; border: 1px solid #e2e8f0; border-radius: 16px; margin-bottom: 10px; transition: all 0.2s; }
+        .pdf-link:active { background: #f8fafc; transform: scale(0.97); }
+        .step-badge { width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; background: #3b82f6; color: white; border-radius: 6px; font-size: 12px; font-weight: bold; margin-right: 8px; }
+        .caution-box { background-color: #fff7ed; border-left: 4px solid #f97316; }
+    </style>
+</head>
+<body class="text-slate-900 leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
+        <div class="max-w-md mx-auto px-5 py-4 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-tighter">Premium ENT Solution</span>
+                <h1 class="text-xl font-black tracking-tighter text-slate-800">MEGA MEDICAL</h1>
+            </div>
+            <a href="tel:1588-4493" class="bg-slate-100 p-2.5 rounded-full text-slate-600 active:bg-orange-100 active:text-orange-600 transition-colors">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto pb-32">
+        
+        <!-- Hero Section -->
+        <section class="bg-slate-900 text-white px-6 py-10 rounded-b-[2.5rem] shadow-xl">
+            <h2 class="text-2xl font-extrabold mb-2 tracking-tight leading-tight">이관 기능 장애를 위한<br><span class="text-orange-400">객관적 진단과 치료</span></h2>
+            <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+                메가메디칼은 이비인후과 전문의를 위해<br>최적의 이관 기능 검사 및 통기 치료 솔루션을 제공합니다.
+            </p>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white/5 border border-white/10 p-4 rounded-2xl">
+                    <span class="text-[10px] text-orange-400 font-bold uppercase block mb-1">Diagnosis</span>
+                    <span class="text-sm font-bold">이관기능검사기</span>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-4 rounded-2xl">
+                    <span class="text-[10px] text-blue-400 font-bold uppercase block mb-1">Treatment</span>
+                    <span class="text-sm font-bold">유스타큐어</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Tab Selector -->
+        <div class="flex p-1.5 bg-white mt-8 mx-5 rounded-2xl shadow-sm border border-slate-200">
+            <button onclick="showTab('jk05ad')" id="tab-jk05ad" class="flex-1 py-3 text-xs font-bold rounded-xl transition-all active-tab">이관기능검사기</button>
+            <button onclick="showTab('eustacure')" id="tab-eustacure" class="flex-1 py-3 text-xs font-bold rounded-xl text-slate-400 transition-all">유스타큐어</button>
+        </div>
+
+        <!-- JK-05AD Section -->
+        <div id="jk05ad" class="tab-content active px-5 mt-8 animate-in slide-in-from-bottom-4 duration-500">
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 mb-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800">이관기능검사기</h3>
+                        <p class="text-xs text-slate-400 font-medium">Eustachian Tube Function Meter (JK-05AD)</p>
+                    </div>
+                    <span class="bg-orange-100 text-orange-600 text-[10px] px-2 py-1 rounded font-bold">진단 전문</span>
+                </div>
+                
+                <!-- Video Section -->
+                <div class="mb-8">
+                    <div class="video-container mb-3">
+                        <iframe id="video-jk" src="https://www.youtube.com/embed/1GibUw10-DI" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://youtu.be/1GibUw10-DI" target="_blank" class="flex items-center justify-center gap-2 bg-slate-50 border border-slate-100 py-3 rounded-xl text-xs font-bold text-slate-500 active:bg-slate-100 transition-all">
+                        <i class="fab fa-youtube text-red-500"></i> 영상이 안 나오면 유튜브에서 보기
+                    </a>
+                </div>
+
+                <!-- Test Modes -->
+                <div class="grid grid-cols-2 gap-3 mb-8">
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                        <i class="fas fa-wave-square text-orange-500 mb-2 block"></i>
+                        <span class="text-[11px] font-bold text-slate-400 block mb-1 uppercase tracking-tighter">Sonotubometry</span>
+                        <span class="text-xs font-bold tracking-tighter">음향 측정법</span>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                        <i class="fas fa-chart-line text-blue-500 mb-2 block"></i>
+                        <span class="text-[11px] font-bold text-slate-400 block mb-1 uppercase tracking-tighter">TTAG/IMP</span>
+                        <span class="text-xs font-bold tracking-tighter">압력/임피던스</span>
+                    </div>
+                </div>
+
+                <!-- Professional Materials -->
+                <div class="space-y-3 mb-8">
+                    <h4 class="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-2">Technical Documents</h4>
+                    <a href="manuals/JK-05AD-퀵매뉴얼.pdf" target="_blank" class="pdf-link">
+                        <div class="bg-red-50 w-10 h-10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-file-pdf text-red-500"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm font-bold text-slate-700">검사기 퀵 매뉴얼</p>
+                            <p class="text-[10px] text-slate-400 font-medium tracking-tight">Flow-chart 및 프로브 설명</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-slate-300 text-xs"></i>
+                    </a>
+                    <a href="manuals/JK-05AD-사용자 교육자료.pdf" target="_blank" class="pdf-link">
+                        <div class="bg-blue-50 w-10 h-10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-book-open text-blue-500"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm font-bold text-slate-700">사용자 교육자료</p>
+                            <p class="text-[10px] text-slate-400 font-medium tracking-tight">이관 장애 판독 가이드</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-slate-300 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Pro Tip -->
+                <div class="caution-box p-5 rounded-2xl">
+                    <h4 class="text-orange-700 font-bold text-sm mb-2"><i class="fas fa-check-circle mr-1"></i> 검사 준비 (Checklist)</h4>
+                    <ul class="text-xs text-orange-800 space-y-2 leading-relaxed font-medium">
+                        <li>• <strong>Release</strong>: 외이도 음압을 제거하여 고막 상태를 중립으로 유지하세요.</li>
+                        <li>• <strong>Seal Check</strong>: 프로브의 밀착 상태를 확인하여 누설을 방지하세요.</li>
+                        <li>• <strong>환자 교육</strong>: 발살바/토인비 호흡법을 충분히 숙지시킨 후 검사하세요.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eustacure Section -->
+        <div id="eustacure" class="tab-content px-5 mt-8 animate-in slide-in-from-bottom-4 duration-500">
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 mb-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-600">유스타큐어</h3>
+                        <p class="text-xs text-slate-400 font-medium">Ear Relief Device (Eustacure)</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-600 text-[10px] px-2 py-1 rounded font-bold">치료 전문</span>
+                </div>
+
+                <!-- Video Section -->
+                <div class="mb-8">
+                    <div class="video-container mb-3">
+                        <iframe id="video-eusta" src="https://www.youtube.com/embed/14ncYF8DT6c" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://youtu.be/14ncYF8DT6c" target="_blank" class="flex items-center justify-center gap-2 bg-slate-50 border border-slate-100 py-3 rounded-xl text-xs font-bold text-slate-500 active:bg-slate-100 transition-all">
+                        <i class="fab fa-youtube text-red-500"></i> 영상이 안 나오면 유튜브에서 보기
+                    </a>
+                </div>
+
+                <!-- Advanced Usage Guide -->
+                <div class="space-y-6 mb-10">
+                    <h4 class="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-4">Treatment Guide</h4>
+                    
+                    <div class="flex items-start">
+                        <span class="step-badge bg-blue-600">01</span>
+                        <div>
+                            <p class="text-sm font-bold text-slate-800 mb-1">노즈피스 고정</p>
+                            <p class="text-xs text-slate-500 leading-normal">한쪽 콧구멍에 노즈피스를 밀착하여 공기가 새지 않도록 고정합니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="step-badge bg-red-500">02</span>
+                        <div>
+                            <p class="text-sm font-bold text-red-600 mb-1 font-black">반대쪽 코 완전 폐쇄</p>
+                            <p class="text-xs text-red-500 font-semibold leading-normal p-2.5 bg-red-50 rounded-xl mt-1 border border-red-100">
+                                손가락으로 반대쪽 콧구멍을 <strong>틈새 없이 꽉</strong> 막으십시오. (가장 중요한 단계)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="step-badge bg-blue-600">03</span>
+                        <div>
+                            <p class="text-sm font-bold text-slate-800 mb-1">작동 및 연하(Swallow)</p>
+                            <p class="text-xs text-slate-500 leading-normal">
+                                버튼을 누르고 공기 주입이 느껴지는 <strong>2~3초 후 침을 삼킵니다.</strong> 이 순간 이관이 열리며 공기가 전달됩니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="step-badge bg-blue-600">04</span>
+                        <div>
+                            <p class="text-sm font-bold text-slate-800 mb-1">반복 및 휴식</p>
+                            <p class="text-xs text-slate-500 leading-normal">약 5분 후 반대쪽도 동일하게 시행하여 중이 음압을 해소합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Materials -->
+                <div class="space-y-3 pt-6 border-t border-slate-100">
+                    <h4 class="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-2">Marketing & Sales</h4>
+                    <a href="manuals/유스타큐어 리플렛.pdf" target="_blank" class="pdf-link">
+                        <div class="bg-orange-50 w-10 h-10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-copy text-orange-500"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm font-bold text-slate-700">제품 안내 리플렛</p>
+                            <p class="text-[10px] text-slate-400 font-medium">사용 목적 및 장점 요약</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-slate-300 text-xs"></i>
+                    </a>
+                    <a href="manuals/유스타큐어 영업자료.pptx" target="_blank" class="pdf-link">
+                        <div class="bg-emerald-50 w-10 h-10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-coins text-emerald-500"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm font-bold text-slate-700">보험 청구 가이드</p>
+                            <p class="text-[10px] text-slate-400 font-medium">S5660 코드 청구 상세 정보</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-slate-300 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Insurance Alert -->
+            <div class="bg-slate-800 text-white rounded-3xl p-6 shadow-xl mb-4 border border-slate-700">
+                <div class="flex items-center gap-2 mb-3">
+                    <i class="fas fa-shield-alt text-emerald-400"></i>
+                    <h4 class="font-bold text-sm tracking-tight">보험 행위료 산정 기준</h4>
+                </div>
+                <p class="text-[11px] text-slate-300 leading-relaxed mb-4">
+                    유스타큐어를 통한 Politzer씨 통기법 실시 시 아래 코드로 청구 가능합니다.
+                </p>
+                <div class="bg-white/10 p-4 rounded-2xl flex justify-between items-center">
+                    <div>
+                        <p class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">EDI CODE</p>
+                        <p class="text-lg font-black text-orange-400">S5660</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[10px] text-slate-400 font-bold">분류번호</p>
+                        <p class="text-sm font-bold">자566</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 mb-24 px-8 text-center">
+            <p class="text-[11px] text-slate-400 leading-normal mb-4">
+                본 가이드는 메가메디칼에서 제공하는 전문 의료진용 매뉴얼입니다.<br>
+                추가적인 기술 지원은 고객센터로 문의 바랍니다.
+            </p>
+            <div class="flex justify-center gap-4">
+                <div class="h-px bg-slate-200 w-12 self-center"></div>
+                <p class="text-[10px] font-black text-slate-300 tracking-widest uppercase">Mega Medical Co., Ltd.</p>
+                <div class="h-px bg-slate-200 w-12 self-center"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Action Area -->
+    <div class="fixed bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-slate-100 via-slate-100/90 to-transparent pointer-events-none">
+        <div class="max-w-md mx-auto pointer-events-auto flex gap-2">
+            <a href="tel:1588-4493" class="flex-[2] flex items-center justify-center bg-slate-900 text-white py-4 rounded-2xl font-bold shadow-2xl active:scale-95 transition-all">
+                <i class="fas fa-headset mr-2 text-orange-400"></i> 기술지원 상담
+            </a>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex-1 bg-white border border-slate-200 text-slate-400 py-4 rounded-2xl font-bold shadow-lg active:scale-95 transition-all">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // 모든 콘텐츠 숨기기
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // 선택된 탭 보이기
+            document.getElementById(tabId).classList.add('active');
+            
+            // 탭 버튼 스타일 업데이트
+            document.querySelectorAll('[id^="tab-"]').forEach(btn => {
+                btn.classList.remove('active-tab', 'text-white');
+                btn.classList.add('text-slate-400');
+            });
+            
+            const activeBtn = document.getElementById('tab-' + tabId);
+            activeBtn.classList.add('active-tab');
+            activeBtn.classList.remove('text-slate-400');
+
+            // 탭 전환 시 영상 일시정지를 위해 소스 리로드
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                const src = iframe.src;
+                iframe.src = src;
+            });
+
+            // 스무스 스크롤
+            window.scrollTo({ top: 150, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
