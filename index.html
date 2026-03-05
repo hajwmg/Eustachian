@@ -24,12 +24,13 @@
 
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
-        <div class="max-w-md mx-auto px-5 py-4 flex justify-between items-center">
+        <div class="max-w-md mx-auto px-5 py-3 flex justify-between items-center">
             <div class="flex flex-col">
-                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-tighter">Premium ENT Solution</span>
+                <span class="text-[10px] font-bold text-orange-500 uppercase tracking-tighter">WE DO Your ENT</span>
                 <h1 class="text-xl font-black tracking-tighter text-slate-800">MEGA MEDICAL</h1>
             </div>
-            <a href="tel:1588-4493" class="bg-slate-100 p-2.5 rounded-full text-slate-600 active:bg-orange-100 active:text-orange-600 transition-colors">
+            <!-- 전화걸기 아이콘: 완벽한 원형 및 입체감 적용 -->
+            <a href="tel:010-4412-5802" class="w-11 h-11 flex items-center justify-center bg-white border border-slate-200 rounded-full text-slate-600 shadow-sm active:bg-orange-50 active:text-orange-600 active:border-orange-200 active:shadow-inner transition-all">
                 <i class="fas fa-phone-alt"></i>
             </a>
         </div>
@@ -198,7 +199,7 @@
                 <!-- Professional Materials -->
                 <div class="space-y-3 pt-6 border-t border-slate-100">
                     <h4 class="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-2">Marketing & Sales</h4>
-                    <a href="manuals/유스타큐어 리플렛.pdf" target="_blank" class="pdf-link">
+                    <a href="manuals/eus_use.pdf" target="_blank" class="pdf-link">
                         <div class="bg-orange-50 w-10 h-10 rounded-xl flex items-center justify-center mr-4">
                             <i class="fas fa-copy text-orange-500"></i>
                         </div>
@@ -208,7 +209,7 @@
                         </div>
                         <i class="fas fa-chevron-right text-slate-300 text-xs"></i>
                     </a>
-                    <a href="manuals/유스타큐어 영업자료.pptx" target="_blank" class="pdf-link">
+                    <a href="manuals/eus_udi.pdf" target="_blank" class="pdf-link">
                         <div class="bg-emerald-50 w-10 h-10 rounded-xl flex items-center justify-center mr-4">
                             <i class="fas fa-coins text-emerald-500"></i>
                         </div>
@@ -259,8 +260,8 @@
     <!-- Bottom Action Area -->
     <div class="fixed bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-slate-100 via-slate-100/90 to-transparent pointer-events-none">
         <div class="max-w-md mx-auto pointer-events-auto flex gap-2">
-            <a href="tel:1588-4493" class="flex-[2] flex items-center justify-center bg-slate-900 text-white py-4 rounded-2xl font-bold shadow-2xl active:scale-95 transition-all">
-                <i class="fas fa-headset mr-2 text-orange-400"></i> 기술지원 상담
+            <a href="tel:010-4412-5802" class="flex-[3] flex items-center justify-center bg-slate-800/90 backdrop-blur-md text-white py-4 rounded-2xl font-bold shadow-xl active:scale-95 transition-all border border-white/10">
+                <i class="fas fa-headset mr-2 text-orange-400"></i> 기술지원 실시간 상담
             </a>
             <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex-1 bg-white border border-slate-200 text-slate-400 py-4 rounded-2xl font-bold shadow-lg active:scale-95 transition-all">
                 <i class="fas fa-arrow-up"></i>
@@ -270,32 +271,22 @@
 
     <script>
         function showTab(tabId) {
-            // 모든 콘텐츠 숨기기
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('active');
             });
-            
-            // 선택된 탭 보이기
             document.getElementById(tabId).classList.add('active');
-            
-            // 탭 버튼 스타일 업데이트
             document.querySelectorAll('[id^="tab-"]').forEach(btn => {
                 btn.classList.remove('active-tab', 'text-white');
                 btn.classList.add('text-slate-400');
             });
-            
             const activeBtn = document.getElementById('tab-' + tabId);
             activeBtn.classList.add('active-tab');
             activeBtn.classList.remove('text-slate-400');
-
-            // 탭 전환 시 영상 일시정지를 위해 소스 리로드
             const iframes = document.querySelectorAll('iframe');
             iframes.forEach(iframe => {
                 const src = iframe.src;
                 iframe.src = src;
             });
-
-            // 스무스 스크롤
             window.scrollTo({ top: 150, behavior: 'smooth' });
         }
     </script>
